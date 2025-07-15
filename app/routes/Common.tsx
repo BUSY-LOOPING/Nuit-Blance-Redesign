@@ -1,6 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 import {Header} from "../components";
+import Footer from "../components/Footer/Footer";
 
 const Common = () => {
   return (
@@ -14,9 +15,7 @@ const Common = () => {
       </main>
 
       {/* Common Footer */}
-      <footer className="bg-gray-800 text-white p-4 text-center">
-        <p>&copy; {new Date().getFullYear()} My App. All rights reserved.</p>
-      </footer>
+      <Footer />
     </div>
   );
 };
