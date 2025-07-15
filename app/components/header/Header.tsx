@@ -2,8 +2,8 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <header className="w-full bg-white py-4 px-6 border-b border-gray-200">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
+    <header className="w-full bg-white py-4">
+      <div className="mx-auto flex flex-col md:flex-row justify-between items-start md:items-center">
         {/* Left side - Branding */}
         <div className="mb-3 md:mb-0">
           <div className="flex flex-col">

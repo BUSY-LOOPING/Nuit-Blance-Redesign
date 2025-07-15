@@ -5,7 +5,7 @@ import Footer from "../components/Footer/Footer";
 
 const Common = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col px-6">
       <Header/>
 
       {/* Main Content Area */}
