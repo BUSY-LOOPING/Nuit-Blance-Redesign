@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
-<<<<<<< Updated upstream
 .footer-icon {
   @apply w-6 h-6 fill-[#111];
 }
-=======
+
 @font-face {
   font-family: "NueueHaas";
   src: url("./fonts/NeueHaasDisplayRoman.woff2") format("woff2");
@@ -29,10 +28,34 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "NueueHaas";
+  src: url("./fonts/NeueHaasDisplayLight.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "NueueHaas";
+  src: url("./fonts/NeueHaasDisplayThin.woff2") format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "EditorialNew";
+  src: url("./fonts/EditorialNewItalic.woff2") format("woff2");
+  font-weight: normal;
+  font-style: italic;
+  font-display: swap;
+}
+
 html, body {
   font-family: "NueueHaas", sans-serif;
   margin: 0;
   padding: 0;
   height: 100%;
+  @apply scroll-smooth;
 }
->>>>>>> Stashed changes
