@@ -1,7 +1,7 @@
 import React from "react";
 import { Outlet } from "react-router";
 import {Header} from "../components";
-import Footer from "../components/Footer/Footer";
+import {Footer} from "../components";
 
 const Common = () => {
   return (
