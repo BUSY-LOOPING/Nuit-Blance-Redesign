@@ -4,3 +4,4 @@ export {default as LandingPage } from "./LandingPage";
 export {default as Info} from "./Info";
 export {default as Memories} from "./Memories";
 export {default as MemoriesCard} from "./MemoriesCard";
+export {default as Itinerary} from "./Itinerary";

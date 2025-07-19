@@ -1,9 +1,5 @@
 import React, { useRef, useEffect } from 'react';
 import { MemoriesCard } from '~/components';
-import gsap from 'gsap';
-import { ScrollTrigger } from "gsap/all";
-
-gsap.registerPlugin(ScrollTrigger);
 
 const imageSources = [
   './images/sample1.jpg',
@@ -20,32 +16,47 @@ const Memories = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
-//   useEffect(() => {
-//     if (!containerRef.current) return;
+  useEffect(() => {
+    let tl: any;
+    let ScrollTrigger: any;
+    let gsap: any;
 
-//     const tl = gsap.timeline({
-//       scrollTrigger: {
-//         trigger: containerRef.current,
-//         start: 'top 80%',
-//         end: 'bottom 20%',
-//         toggleActions: 'play none none reverse',
-//       },
-//     });
+    // Only run on client
+    import('gsap').then((mod) => {
+      gsap = mod.default;
+      import('gsap/ScrollTrigger').then((pluginMod) => {
+        ScrollTrigger = pluginMod.default;
+        gsap.registerPlugin(ScrollTrigger);
 
-//     tl.from(cardsRef.current, {
-//       y: 50,
-//       x: 50,
-//       opacity: 0,
-//       stagger: 0.15,
-//       duration: 1,
-//       ease: 'power3.out',
-//     });
+        if (!containerRef.current) return;
 
-//     return () => {
-//       ScrollTrigger.getById('memories-trigger')?.kill();
-//       tl.kill();
-//     };
-//   }, []);
+        tl = gsap.timeline({
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: 'top 80%',
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        tl.from(cardsRef.current, {
+          y: 50,
+          x: 50,
+          opacity: 0,
+          stagger: 0.15,
+          duration: 1,
+          ease: 'power3.out',
+        });
+      });
+    });
+
+    return () => {
+      if (ScrollTrigger) {
+        ScrollTrigger.getById && ScrollTrigger.getById('memories-trigger')?.kill();
+      }
+      tl?.kill();
+    };
+  }, []);
 
   return (
     <section className="w-full min-h-[90vh] mt-10 px-8">

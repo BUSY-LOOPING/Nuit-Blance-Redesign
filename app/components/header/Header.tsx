@@ -24,11 +24,11 @@ const Header = () => {
 
         {/* Right side - Empty for spacing */}
         <div className="flex flex-row gap-5 items-center text-[1.2rem]">
-          <a href="#">Join Us</a>
+          <a href="/events">Events</a>
           <a href="#">About</a>
           <a href="#">Socials</a>
           <div className="bg-black text-white py-4 px-7 rounded-full flex flex-row items-center gap-3">
-            <a href="#">Itenirary</a>
+            <a href="/itinerary-window">Itinerary</a>
             <div className="w-[5px] h-[5px] bg-white rounded-full"></div>
           </div>
         </div>
