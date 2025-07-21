@@ -3,7 +3,7 @@ import { MemoriesCard } from '~/components';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/all";
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 const imageSources = [
   './images/sample1.jpg',
@@ -64,7 +64,7 @@ const Memories = () => {
       </p>
 
       <div className="w-full mt-10" >
-        <div className="flex h-max w-max gap-3" ref={scrollRef}>
+        <div className="flex h-max w-max gap-3" >
           {imageSources.map((src, i) => (
               <MemoriesCard key={i} src={src} />
           ))}
