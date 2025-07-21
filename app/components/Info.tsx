@@ -2,7 +2,7 @@ import React from 'react'
 
 const Info = () => {
   return (
-    <div className='w-full h-[100vh] flex font-light'>
+    <div className='w-full h-full flex font-light'>
       <article className='w-full flex flex-row gap-[15vw]'>
         <h3 className='text-3xl font-thin text-gray-800'>
             2025 Theme

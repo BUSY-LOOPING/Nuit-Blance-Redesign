@@ -6,6 +6,14 @@ import {
   Scripts,
   ScrollRestoration,
 } from "react-router";
+import gsap from 'gsap';
+import { ScrollTrigger } from "gsap/all";
+
+// gsap.registerPlugin(ScrollTrigger);
+
+if (typeof window !== "undefined" && gsap && ScrollTrigger) {
+  gsap.registerPlugin(ScrollTrigger);
+}
 
 import type { Route } from "./+types/root";
 import "./app.css";

@@ -3,6 +3,7 @@ import { Outlet } from "react-router";
 import {Header} from "../components";
 import {Footer} from "../components";
 
+
 const Common = () => {
   return (
     <div className="min-h-screen flex flex-col px-6">

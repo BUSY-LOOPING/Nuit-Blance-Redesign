@@ -7,7 +7,7 @@
     const MemoriesCard = ({src}: MemoriesCardProps) => {
     return (
         <div>
-        <img src={src} alt="memory" className="h-full object-cover w-full" />
+        <img src={src} alt="memory" className="object-contain w-[600px]" />
         </div>
     );
     }
