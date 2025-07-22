@@ -1,0 +1,12 @@
+FROM python:3.11-slim
+
+WORKDIR /app
+COPY deploy_webhook.py .
+COPY requirements.txt .
+COPY .env .
+
+RUN pip install --no-cache-dir -r requirements.txt
+
+EXPOSE 5001
+
+CMD ["python", "deploy_webhook.py"]
